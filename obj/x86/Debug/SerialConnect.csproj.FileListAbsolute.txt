@@ -1,0 +1,22 @@
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\bin\x86\Debug\System.Data.SQLite.dll
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\bin\x86\Debug\System.Runtime.WindowsRuntime.dll
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\bin\x86\Debug\Windows.winmd
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\SerialConnect.FormMain.resources
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\SerialConnect.Properties.Resources.resources
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\SerialConnect.textbox_tm.resources
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\SerialConnect.csproj.GenerateResource.cache
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\SerialConnect.csproj.CoreCompileInputs.cache
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\SerialConnect.csproj.CopyComplete
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\SerialConnect.csprojAssemblyReference.cache
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\SerialConnect.Form1.resources
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\bin\x86\Debug\USB TPMS.exe.config
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\bin\x86\Debug\USB TPMS.exe.manifest
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\bin\x86\Debug\USB TPMS.application
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\bin\x86\Debug\USB TPMS.exe
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\bin\x86\Debug\USB TPMS.pdb
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\USB TPMS.exe.manifest
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\USB TPMS.application
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\USB TPMS.exe
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\USB TPMS.pdb
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\SerialConnect.Enroll.resources
+C:\Users\jianzhi.wang.ORANGE\Desktop\LytraxIO_SerialConnect-master\obj\x86\Debug\SerialConnect.ResetPs.resources
