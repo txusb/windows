@@ -75,7 +75,7 @@ namespace SerialConnect
 "</soap12:Envelope>";
                 Console.WriteLine(parm);
                 byte[] bs = Encoding.UTF8.GetBytes(parm);    //参数转化为ascii码
-                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create("http://35.240.51.141/App_Asmx/ToolApp.asmx");
+                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create("http://bento2.orange-electronic.com/App_Asmx/ToolApp.asmx");
                 req.Method = "POST";    //确定传值的方式，此处为post方式传值
                 req.ContentType = "application/soap+xml; charset=utf-8";
                 using (Stream reqStream = req.GetRequestStream())
@@ -158,7 +158,7 @@ namespace SerialConnect
 "</soap12:Envelope>";
                 Console.WriteLine(parm);
                 byte[] bs = Encoding.UTF8.GetBytes(parm);    //参数转化为ascii码
-                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create("http://35.240.51.141/App_Asmx/ToolApp.asmx");
+                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create("http://bento2.orange-electronic.com/App_Asmx/ToolApp.asmx");
                 req.Method = "POST";    //确定传值的方式，此处为post方式传值
                 req.ContentType = "application/soap+xml; charset=utf-8";
                 using (Stream reqStream = req.GetRequestStream())
@@ -219,7 +219,7 @@ namespace SerialConnect
                     "</soap12:Envelope>";
                 Console.WriteLine(parm);
                 byte[] bs = Encoding.ASCII.GetBytes(parm);    //参数转化为ascii码
-                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create("http://35.240.51.141/App_Asmx/ToolApp.asmx");
+                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create("http://bento2.orange-electronic.com/App_Asmx/ToolApp.asmx");
                 req.Method = "POST";    //确定传值的方式，此处为post方式传值
                 req.ContentType = "application/soap+xml; charset=utf-8";
                 req.ContentLength = bs.Length;
@@ -260,7 +260,7 @@ namespace SerialConnect
                     "  </soap12:Body>\n" +
                     "</soap12:Envelope>";
                 byte[] bs = Encoding.ASCII.GetBytes(parm);    //参数转化为ascii码
-                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create("http://35.240.51.141/App_Asmx/ToolApp.asmx");
+                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create("http://bento2.orange-electronic.com/App_Asmx/ToolApp.asmx");
                 req.Method = "POST";    //确定传值的方式，此处为post方式传值
                 req.ContentType = "application/soap+xml; charset=utf-8";
                 req.ContentLength = bs.Length;
@@ -302,7 +302,7 @@ namespace SerialConnect
 "  </soap12:Body>\n" +
 "</soap12:Envelope>";
                 byte[] bs = Encoding.ASCII.GetBytes(parm);    //参数转化为ascii码
-                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create("http://35.240.51.141/App_Asmx/ToolApp.asmx");
+                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create("http://bento2.orange-electronic.com/App_Asmx/ToolApp.asmx");
                 req.Method = "POST";    //确定传值的方式，此处为post方式传值
                 req.ContentType = "application/soap+xml; charset=utf-8";
                 req.ContentLength = bs.Length;
