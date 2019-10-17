@@ -56,27 +56,6 @@ namespace SerialConnect
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.LRL2 = new System.Windows.Forms.TextBox();
-            this.LRI2 = new System.Windows.Forms.PictureBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.LRL1 = new System.Windows.Forms.Label();
-            this.LRI1 = new System.Windows.Forms.PictureBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.LRC = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.LFL2 = new System.Windows.Forms.Label();
-            this.LFI2 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.LFL1 = new System.Windows.Forms.TextBox();
-            this.LFI1 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.LFC = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -118,26 +97,32 @@ namespace SerialConnect
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.LFC = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.LFI1 = new System.Windows.Forms.PictureBox();
+            this.LFL1 = new System.Windows.Forms.TextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.LFI2 = new System.Windows.Forms.PictureBox();
+            this.LFL2 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.LRC = new System.Windows.Forms.PictureBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.LRI1 = new System.Windows.Forms.PictureBox();
+            this.LRL1 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.LRI2 = new System.Windows.Forms.PictureBox();
+            this.LRL2 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3.SuspendLayout();
             this.panel22.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LRI2)).BeginInit();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LRI1)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LRC)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LFI2)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LFI1)).BeginInit();
-            this.panel8.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LFC)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel12.SuspendLayout();
@@ -165,6 +150,21 @@ namespace SerialConnect
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel8.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LFC)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LFI1)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LFI2)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LRC)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LRI1)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LRI2)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // serialPort1
@@ -448,299 +448,6 @@ namespace SerialConnect
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(529, 318);
             this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.panel11, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.panel10, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.panel9, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.panel7, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.panel6, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.panel8, 0, 2);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 15);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 15, 3, 20);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(184, 283);
-            this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel11.Controls.Add(this.LRL2);
-            this.panel11.Controls.Add(this.LRI2);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(33, 238);
-            this.panel11.Margin = new System.Windows.Forms.Padding(33, 3, 3, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(148, 42);
-            this.panel11.TabIndex = 5;
-            // 
-            // LRL2
-            // 
-            this.LRL2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LRL2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.LRL2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LRL2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LRL2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LRL2.Location = new System.Drawing.Point(14, 10);
-            this.LRL2.Name = "LRL2";
-            this.LRL2.Size = new System.Drawing.Size(120, 15);
-            this.LRL2.TabIndex = 4;
-            this.LRL2.Tag = "LR";
-            this.LRL2.Text = "Original sensor ID";
-            this.LRL2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // LRI2
-            // 
-            this.LRI2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LRI2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.LRI2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LRI2.Image = global::SerialConnect.Properties.Resources.img_rectangle_gray;
-            this.LRI2.Location = new System.Drawing.Point(-1, 0);
-            this.LRI2.Name = "LRI2";
-            this.LRI2.Size = new System.Drawing.Size(149, 42);
-            this.LRI2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LRI2.TabIndex = 2;
-            this.LRI2.TabStop = false;
-            // 
-            // panel10
-            // 
-            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel10.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel10.Controls.Add(this.LRL1);
-            this.panel10.Controls.Add(this.LRI1);
-            this.panel10.Location = new System.Drawing.Point(33, 191);
-            this.panel10.Margin = new System.Windows.Forms.Padding(33, 3, 3, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(148, 41);
-            this.panel10.TabIndex = 4;
-            // 
-            // LRL1
-            // 
-            this.LRL1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LRL1.BackColor = System.Drawing.Color.Transparent;
-            this.LRL1.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LRL1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LRL1.Location = new System.Drawing.Point(0, 0);
-            this.LRL1.Name = "LRL1";
-            this.LRL1.Size = new System.Drawing.Size(149, 41);
-            this.LRL1.TabIndex = 4;
-            this.LRL1.Text = "New sensor ID";
-            this.LRL1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LRI1
-            // 
-            this.LRI1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LRI1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.LRI1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LRI1.Image = global::SerialConnect.Properties.Resources.img_rectangle_gray;
-            this.LRI1.Location = new System.Drawing.Point(-1, 0);
-            this.LRI1.Name = "LRI1";
-            this.LRI1.Size = new System.Drawing.Size(149, 41);
-            this.LRI1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LRI1.TabIndex = 2;
-            this.LRI1.TabStop = false;
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel9.Controls.Add(this.tableLayoutPanel5);
-            this.panel9.Location = new System.Drawing.Point(3, 144);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(178, 41);
-            this.panel9.TabIndex = 3;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel5.Controls.Add(this.LRC, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(178, 41);
-            this.tableLayoutPanel5.TabIndex = 2;
-            // 
-            // LRC
-            // 
-            this.LRC.BackgroundImage = global::SerialConnect.Properties.Resources.icon_Round_normal;
-            this.LRC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LRC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LRC.Location = new System.Drawing.Point(146, 3);
-            this.LRC.Name = "LRC";
-            this.LRC.Padding = new System.Windows.Forms.Padding(5);
-            this.LRC.Size = new System.Drawing.Size(29, 35);
-            this.LRC.TabIndex = 2;
-            this.LRC.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 41);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "4. LR (left rear)";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel7.Controls.Add(this.LFL2);
-            this.panel7.Controls.Add(this.LFI2);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(33, 50);
-            this.panel7.Margin = new System.Windows.Forms.Padding(33, 3, 3, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(148, 41);
-            this.panel7.TabIndex = 1;
-            // 
-            // LFL2
-            // 
-            this.LFL2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LFL2.BackColor = System.Drawing.Color.Transparent;
-            this.LFL2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LFL2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LFL2.Location = new System.Drawing.Point(0, 0);
-            this.LFL2.Name = "LFL2";
-            this.LFL2.Size = new System.Drawing.Size(149, 41);
-            this.LFL2.TabIndex = 3;
-            this.LFL2.Text = "New sensor ID";
-            this.LFL2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LFI2
-            // 
-            this.LFI2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LFI2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.LFI2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LFI2.Image = global::SerialConnect.Properties.Resources.img_rectangle_gray;
-            this.LFI2.Location = new System.Drawing.Point(-1, 0);
-            this.LFI2.Name = "LFI2";
-            this.LFI2.Size = new System.Drawing.Size(149, 41);
-            this.LFI2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LFI2.TabIndex = 2;
-            this.LFI2.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel6.Controls.Add(this.LFL1);
-            this.panel6.Controls.Add(this.LFI1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(33, 3);
-            this.panel6.Margin = new System.Windows.Forms.Padding(33, 3, 3, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(148, 41);
-            this.panel6.TabIndex = 0;
-            // 
-            // LFL1
-            // 
-            this.LFL1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LFL1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.LFL1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LFL1.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LFL1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LFL1.Location = new System.Drawing.Point(15, 9);
-            this.LFL1.Name = "LFL1";
-            this.LFL1.Size = new System.Drawing.Size(120, 15);
-            this.LFL1.TabIndex = 3;
-            this.LFL1.Tag = "LF";
-            this.LFL1.Text = "Original sensor ID";
-            this.LFL1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // LFI1
-            // 
-            this.LFI1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LFI1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LFI1.Image = global::SerialConnect.Properties.Resources.img_rectangle_gray;
-            this.LFI1.Location = new System.Drawing.Point(0, 0);
-            this.LFI1.Name = "LFI1";
-            this.LFI1.Size = new System.Drawing.Size(148, 41);
-            this.LFI1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LFI1.TabIndex = 4;
-            this.LFI1.TabStop = false;
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel8.Controls.Add(this.tableLayoutPanel4);
-            this.panel8.Location = new System.Drawing.Point(3, 97);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(178, 41);
-            this.panel8.TabIndex = 2;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.LFC, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(178, 41);
-            this.tableLayoutPanel4.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 41);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "1. LF (left front)";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // LFC
-            // 
-            this.LFC.BackgroundImage = global::SerialConnect.Properties.Resources.icon_Round_normal;
-            this.LFC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LFC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LFC.Location = new System.Drawing.Point(146, 3);
-            this.LFC.Name = "LFC";
-            this.LFC.Padding = new System.Windows.Forms.Padding(5);
-            this.LFC.Size = new System.Drawing.Size(29, 35);
-            this.LFC.TabIndex = 1;
-            this.LFC.TabStop = false;
             // 
             // panel4
             // 
@@ -1298,6 +1005,299 @@ namespace SerialConnect
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
             // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel8.Controls.Add(this.tableLayoutPanel4);
+            this.panel8.Location = new System.Drawing.Point(3, 97);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(178, 41);
+            this.panel8.TabIndex = 2;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.LFC, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(178, 41);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // LFC
+            // 
+            this.LFC.BackgroundImage = global::SerialConnect.Properties.Resources.icon_Round_normal;
+            this.LFC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LFC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LFC.Location = new System.Drawing.Point(146, 3);
+            this.LFC.Name = "LFC";
+            this.LFC.Padding = new System.Windows.Forms.Padding(5);
+            this.LFC.Size = new System.Drawing.Size(29, 35);
+            this.LFC.TabIndex = 1;
+            this.LFC.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(137, 41);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "1. LF (left front)";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel6.Controls.Add(this.LFL1);
+            this.panel6.Controls.Add(this.LFI1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(33, 3);
+            this.panel6.Margin = new System.Windows.Forms.Padding(33, 3, 3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(148, 41);
+            this.panel6.TabIndex = 0;
+            // 
+            // LFI1
+            // 
+            this.LFI1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LFI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LFI1.Image = global::SerialConnect.Properties.Resources.img_rectangle_gray;
+            this.LFI1.Location = new System.Drawing.Point(0, 0);
+            this.LFI1.Name = "LFI1";
+            this.LFI1.Size = new System.Drawing.Size(148, 41);
+            this.LFI1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LFI1.TabIndex = 4;
+            this.LFI1.TabStop = false;
+            // 
+            // LFL1
+            // 
+            this.LFL1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LFL1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.LFL1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LFL1.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LFL1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LFL1.Location = new System.Drawing.Point(15, 9);
+            this.LFL1.Name = "LFL1";
+            this.LFL1.Size = new System.Drawing.Size(120, 15);
+            this.LFL1.TabIndex = 3;
+            this.LFL1.Tag = "LF";
+            this.LFL1.Text = "Original sensor ID";
+            this.LFL1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel7.Controls.Add(this.LFL2);
+            this.panel7.Controls.Add(this.LFI2);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(33, 50);
+            this.panel7.Margin = new System.Windows.Forms.Padding(33, 3, 3, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(148, 41);
+            this.panel7.TabIndex = 1;
+            // 
+            // LFI2
+            // 
+            this.LFI2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LFI2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.LFI2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.LFI2.Image = global::SerialConnect.Properties.Resources.img_rectangle_gray;
+            this.LFI2.Location = new System.Drawing.Point(-1, 0);
+            this.LFI2.Name = "LFI2";
+            this.LFI2.Size = new System.Drawing.Size(149, 41);
+            this.LFI2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LFI2.TabIndex = 2;
+            this.LFI2.TabStop = false;
+            // 
+            // LFL2
+            // 
+            this.LFL2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LFL2.BackColor = System.Drawing.Color.Transparent;
+            this.LFL2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LFL2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LFL2.Location = new System.Drawing.Point(0, 0);
+            this.LFL2.Name = "LFL2";
+            this.LFL2.Size = new System.Drawing.Size(149, 41);
+            this.LFL2.TabIndex = 3;
+            this.LFL2.Text = "New sensor ID";
+            this.LFL2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel9.Controls.Add(this.tableLayoutPanel5);
+            this.panel9.Location = new System.Drawing.Point(3, 144);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(178, 41);
+            this.panel9.TabIndex = 3;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel5.Controls.Add(this.LRC, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(178, 41);
+            this.tableLayoutPanel5.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 41);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "4. LR (left rear)";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // LRC
+            // 
+            this.LRC.BackgroundImage = global::SerialConnect.Properties.Resources.icon_Round_normal;
+            this.LRC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LRC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LRC.Location = new System.Drawing.Point(146, 3);
+            this.LRC.Name = "LRC";
+            this.LRC.Padding = new System.Windows.Forms.Padding(5);
+            this.LRC.Size = new System.Drawing.Size(29, 35);
+            this.LRC.TabIndex = 2;
+            this.LRC.TabStop = false;
+            // 
+            // panel10
+            // 
+            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel10.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel10.Controls.Add(this.LRL1);
+            this.panel10.Controls.Add(this.LRI1);
+            this.panel10.Location = new System.Drawing.Point(33, 191);
+            this.panel10.Margin = new System.Windows.Forms.Padding(33, 3, 3, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(148, 41);
+            this.panel10.TabIndex = 4;
+            // 
+            // LRI1
+            // 
+            this.LRI1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LRI1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.LRI1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.LRI1.Image = global::SerialConnect.Properties.Resources.img_rectangle_gray;
+            this.LRI1.Location = new System.Drawing.Point(-1, 0);
+            this.LRI1.Name = "LRI1";
+            this.LRI1.Size = new System.Drawing.Size(149, 41);
+            this.LRI1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LRI1.TabIndex = 2;
+            this.LRI1.TabStop = false;
+            // 
+            // LRL1
+            // 
+            this.LRL1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LRL1.BackColor = System.Drawing.Color.Transparent;
+            this.LRL1.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LRL1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LRL1.Location = new System.Drawing.Point(0, 0);
+            this.LRL1.Name = "LRL1";
+            this.LRL1.Size = new System.Drawing.Size(149, 41);
+            this.LRL1.TabIndex = 4;
+            this.LRL1.Text = "New sensor ID";
+            this.LRL1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel11.Controls.Add(this.LRL2);
+            this.panel11.Controls.Add(this.LRI2);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel11.Location = new System.Drawing.Point(33, 238);
+            this.panel11.Margin = new System.Windows.Forms.Padding(33, 3, 3, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(148, 42);
+            this.panel11.TabIndex = 5;
+            // 
+            // LRI2
+            // 
+            this.LRI2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LRI2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.LRI2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.LRI2.Image = global::SerialConnect.Properties.Resources.img_rectangle_gray;
+            this.LRI2.Location = new System.Drawing.Point(-1, 0);
+            this.LRI2.Name = "LRI2";
+            this.LRI2.Size = new System.Drawing.Size(149, 42);
+            this.LRI2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LRI2.TabIndex = 2;
+            this.LRI2.TabStop = false;
+            // 
+            // LRL2
+            // 
+            this.LRL2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LRL2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
+            this.LRL2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LRL2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LRL2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LRL2.Location = new System.Drawing.Point(14, 10);
+            this.LRL2.Name = "LRL2";
+            this.LRL2.Size = new System.Drawing.Size(120, 15);
+            this.LRL2.TabIndex = 4;
+            this.LRL2.Tag = "LR";
+            this.LRL2.Text = "Original sensor ID";
+            this.LRL2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.panel11, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.panel10, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.panel9, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.panel7, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.panel6, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel8, 0, 2);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 15);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 15, 3, 20);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 6;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(184, 283);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1321,23 +1321,6 @@ namespace SerialConnect
             this.tableLayoutPanel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LRI2)).EndInit();
-            this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LRI1)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LRC)).EndInit();
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LFI2)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LFI1)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LFC)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel12.ResumeLayout(false);
@@ -1370,6 +1353,23 @@ namespace SerialConnect
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LFC)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LFI1)).EndInit();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LFI2)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LRC)).EndInit();
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LRI1)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LRI2)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1782,26 +1782,6 @@ namespace SerialConnect
         private PictureBox pictureBox4;
         private Label label4;
         private TableLayoutPanel tableLayoutPanel2;
-        private TableLayoutPanel tableLayoutPanel3;
-        private Panel panel11;
-        private TextBox LRL2;
-        private PictureBox LRI2;
-        private Panel panel10;
-        private Label LRL1;
-        private PictureBox LRI1;
-        private Panel panel9;
-        private TableLayoutPanel tableLayoutPanel5;
-        private PictureBox LRC;
-        private Label label6;
-        private Panel panel7;
-        private Label LFL2;
-        private PictureBox LFI2;
-        private Panel panel6;
-        private PictureBox LFI1;
-        private Panel panel8;
-        private TableLayoutPanel tableLayoutPanel4;
-        private Label label5;
-        private PictureBox LFC;
         private Panel panel4;
         private TableLayoutPanel tableLayoutPanel9;
         private PictureBox pictureBox2;
@@ -1831,13 +1811,33 @@ namespace SerialConnect
         private Panel panel20;
         private Label label11;
         private PictureBox pictureBox5;
-        private TextBox LFL1;
         private Panel panel17;
         private PictureBox RFI1;
         private TextBox RFL1;
         private Panel panel16;
         private Label RFL2;
         private PictureBox RFI2;
+        private TableLayoutPanel tableLayoutPanel3;
+        private Panel panel11;
+        private TextBox LRL2;
+        private PictureBox LRI2;
+        private Panel panel10;
+        private Label LRL1;
+        private PictureBox LRI1;
+        private Panel panel9;
+        private TableLayoutPanel tableLayoutPanel5;
+        private PictureBox LRC;
+        private Label label6;
+        private Panel panel7;
+        private Label LFL2;
+        private PictureBox LFI2;
+        private Panel panel6;
+        private TextBox LFL1;
+        private PictureBox LFI1;
+        private Panel panel8;
+        private TableLayoutPanel tableLayoutPanel4;
+        private Label label5;
+        private PictureBox LFC;
     }
  
 }

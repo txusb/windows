@@ -85,6 +85,38 @@ namespace SerialConnect
             UpdateUi(LR, UN_LINK);
             new Thread(UdCondition).Start();
         }
+        public void CopyUI() {
+            this.tableLayoutPanel3.Controls.Clear();
+            this.tableLayoutPanel3.Controls.Add(this.panel11, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.panel10, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.panel9, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.panel7, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel6, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.panel8, 0, 2);
+            this.tableLayoutPanel6.Controls.Clear();
+            this.tableLayoutPanel6.Controls.Add(this.panel13, 0, 5);
+            this.tableLayoutPanel6.Controls.Add(this.panel14, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.panel15, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.panel16, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.panel17, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.panel18, 0, 2);
+        }
+        public void ProGramUI() {
+            this.tableLayoutPanel3.Controls.Clear();
+            this.tableLayoutPanel3.Controls.Add(this.panel11, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.panel10, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.panel9, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.panel7, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.panel6, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel8, 0, 2);
+            this.tableLayoutPanel6.Controls.Clear();
+            this.tableLayoutPanel6.Controls.Add(this.panel13, 0, 5);
+            this.tableLayoutPanel6.Controls.Add(this.panel14, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.panel15, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.panel16, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.panel17, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.panel18, 0, 2);
+        }
         public void NoPR() {
             button1.Enabled = false;
         }
@@ -555,11 +587,13 @@ namespace SerialConnect
         private void Button4_Click(object sender, EventArgs e)
         {
             SqlHelper.SelectMake(comboBox2);
+            button1.BackgroundImage = Properties.Resources.button_Locked;
             comboBox2.DroppedDown = true;
         }
 
         private void Button5_Click(object sender, EventArgs e)
         {
+            button1.BackgroundImage = Properties.Resources.button_Locked;
             comboBox3.DroppedDown = true;
         }
 
@@ -578,6 +612,7 @@ namespace SerialConnect
                 first = true;
                 new Thread(DonloadS19).Start();
                 button6.Text = comboBox4.SelectedItem.ToString();
+                button1.BackgroundImage= Properties.Resources.button_normal;
                 UpdateUiCondition(PROGRAM_WAIT);
                 idcount = SqlHelper.Idcount(s19name);
                 LFL1.Text = "";
@@ -629,6 +664,7 @@ namespace SerialConnect
             ISid(false);
             repaint();
             PRORID = "PR";
+            ProGramUI();
         }
 
         private void IDCOPY_Click(object sender, EventArgs e)
@@ -640,6 +676,7 @@ namespace SerialConnect
             ISid(true);
             repaint();
             PRORID = "ID";
+            CopyUI();
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
