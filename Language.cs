@@ -39,7 +39,7 @@ namespace SerialConnect
             ,"发送","请至您的电子信箱收取信件，找到我们发送的电子邮件，主题为“重设密码”。"};
 
         public static string[] DE = new string[]{"Orange RDKS Programmier-System","User Login","User Name","Passwort", "Log in", "Fahrzeug-Auswahl",
-            "machen", "Modell", "Jahr", "Menge", "Wählen sie Reifenposition aus (mehrere Möglichkeiten)", "RV (rechts vorne)", "RH (rechts hinten)","LV (links vorne)","LH (links hinten)","wählen sie alle aus ","nächste","Neuauswahl"
+            "machen", "Modell", "Jahr", "Menge", "Wählen sie Reifenposition aus (mehrere Möglichkeiten)", "RV (rechts vorne)", "RH (rechts hinten)","LH (links hinten)","LV (links vorne)","wählen sie alle aus ","nächste","Neuauswahl"
         ,"Sensor programmieren","Neue Sensor ID Nummer","Original Sensor ID Nummer","Fahrzeug-Auswahl, bitte wählen sie Machen, Modell, Jahr, Reifenposition und dann klicken sie \"Nächste\"","Bitte geben sie die Sensor ID Nummer gemäß der Position ein"
         ,"Bestätigen Sie die ID Nummer und klicken \"Sensor programmieren\"","Programmierung, bitte Sensor nicht bewegen","Programmierung beendet","Fehler (Fehler bei Reifenposition)","Fahrzeug-Auswahl, bitte wählen sie Machen, Modell, Jahr, Reifenposition und dann klicken sie \"Nächste\""
         ,"Fehler Code:","PAD konnte im System nicht gefunden werden","PAD nicht korrekt verbunden"," Sensor wurde während der Programmierung bewegt","Internet-Verbindung Zeit abgelaufen","keine Internet-Verbindung","Fehler beim herunterladen des Katalogs","Scanner ist nicht verbunden","Pad wurde in der Mitte entfernt"
