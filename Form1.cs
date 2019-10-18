@@ -30,7 +30,7 @@ namespace SerialConnect
             Console.WriteLine(DateTime.Now.Ticks);
             comboBox1.Items.Add("繁體中文");
             comboBox1.Items.Add("简体中文");
-            comboBox1.Items.Add("Deutsche");
+            comboBox1.Items.Add("Deutsch");
             comboBox1.Items.Add("English");
             comboBox1.Items.Add("Italiano");
             button4.Text = FtpManager.GetLanguage();

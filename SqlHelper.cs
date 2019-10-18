@@ -104,7 +104,7 @@ namespace SerialConnect
                 case "简体中文":
                     colname = "Relearn Procedure (Jane)";
                     break;
-                case "Deutsche":
+                case "Deutsch":
                     colname = "Relearn Procedure (German)";
                     break;
                 case "English":

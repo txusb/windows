@@ -38,15 +38,15 @@ namespace SerialConnect
         ,"密码","输入密码","再次输入密码","个人资料","名字","姓","公司","电话","产品序号","邮件地址","地區","邮政编码","街","市","省","至少8个字符","请确认密码","注册","取消","邮件已发送","重设密码","請輸入註冊O请输入注册O-Genius所设定的《电子邮件信箱》"
             ,"发送","请至您的电子信箱收取信件，找到我们发送的电子邮件，主题为“重设密码”。"};
 
-        public static string[] DE = new string[]{"Orange RDKS Programmier-System","User Login","User Name","Passwort", "Log in", "Fahrzeug-Auswahl",
+        public static string[] DE = new string[]{"Orange RDKS Programmier-System","eintragen","User Name","Passwort", "eintragen", "Fahrzeug-Auswahl",
             "machen", "Modell", "Jahr", "Menge", "Wählen sie Reifenposition aus (mehrere Möglichkeiten)", "RV (rechts vorne)", "RH (rechts hinten)","LH (links hinten)","LV (links vorne)","wählen sie alle aus ","nächste","Neuauswahl"
-        ,"Sensor programmieren","Neue Sensor ID Nummer","Original Sensor ID Nummer","Fahrzeug-Auswahl, bitte wählen sie Machen, Modell, Jahr, Reifenposition und dann klicken sie \"Nächste\"","Bitte geben sie die Sensor ID Nummer gemäß der Position ein"
+        ,"Sensor programmieren","Neue Sensor ID Nummer","Neue Sensor ID Nummer","Fahrzeug-Auswahl, bitte wählen sie Machen, Modell, Jahr, Reifenposition und dann klicken sie \"Nächste\"","Bitte geben sie die Sensor ID Nummer gemäß der Position ein"
         ,"Bestätigen Sie die ID Nummer und klicken \"Sensor programmieren\"","Programmierung, bitte Sensor nicht bewegen","Programmierung beendet","Fehler (Fehler bei Reifenposition)","Fahrzeug-Auswahl, bitte wählen sie Machen, Modell, Jahr, Reifenposition und dann klicken sie \"Nächste\""
         ,"Fehler Code:","PAD konnte im System nicht gefunden werden","PAD nicht korrekt verbunden"," Sensor wurde während der Programmierung bewegt","Internet-Verbindung Zeit abgelaufen","keine Internet-Verbindung","Fehler beim herunterladen des Katalogs","Scanner ist nicht verbunden","Pad wurde in der Mitte entfernt"
         ,"Pad lädt Ausnahme","Dieser Fehler kam wegen einer unbekannten Verbindung","Das Programmier-Formluar wird geladen","Internet-Verbindung Zeit abgelaufen, wollen sie sich nochmals einloggen?","Die Anzahl der im PAD-Gerät erkannten Sensoren stimmt nicht mit der ausgewählten Anzahl überein","Anmeldung fehlgeschlagen"
-        ,"Relearn Procedure","START","Please insert the sensor into the USB PAD.","error","Unlinked","Suchen Sie nach Updates","USB-PAD-Treiber Aktualisierung","Update abgeschlossen","Update fehlgeschlagen","Um auf die neueste Version zu aktualisieren","Möchten Sie aktualisieren?","Registrierung fehlgeschlagen","Registration success","Create your email account","Account Number","E-mail"
-        ,"Passwort","Choose a password","Repeat password","Personal details","First Name","Last Name","Company","Contact Phone Number","Product serial number","Physical address / Mailing address","Bereich","ZP_Code","Street","City","State","At least 8 characters","Bitte bestätigen Sie das Passwort","Registration","cancel","Die Email wurde verschickt","Passwort zurücksetzen","Please provide the email address that you used when you signed up for O-GENIUS account."
-            ,"einreichen","Go to your email inbox and find an email from us with the subject “Reset your password”."};
+        ,"Anlern-Prozedur","START","Bitte stecken Sie den Sensor in das USB-PAD.","Error","Nicht verbunden","Suchen Sie nach Updates","USB-PAD-Treiber Aktualisierung","Update abgeschlossen","Update fehlgeschlagen","Um auf die neueste Version zu aktualisieren","Möchten Sie aktualisieren?","Registrierung fehlgeschlagen","Registrierung erfolgreich","erstellen Sie Ihren email account","Acoount Nummer","E-mail"
+        ,"Passwort","Wählen Sie ein Passwort aus","wiederholen Sie das Passwort","persönliche Details","Erster Name","Zweiter Name","Firma","Telefon-Nummer","Produkt-Serien-Nummer","persönliche Adresse/Mail-Adresse","Bereich","Postleitzahl","Straße","Stadt","Bundesland","mit mindestens acht Buchstaben","Bitte bestätigen Sie das Passwort","Registrierung","löschen","Die Email wurde verschickt","Passwort zurücksetzen","Bitte stellen sie die e-mail-Adresse zur Verfügung, die sie genommen haben, als sie sich für den O-GENIUS-Account angemeldet haben"
+            ,"einreichen","Gehen Sie zu ihrer email-Liste und suchen Sie die email mit dem Namen 'Reset your password'"};
 
 
         public static string[] IT = new string[]{"Sistema di programmazione TPMS Orange","Accesso utente","Nome utente","Password", "Accesso", "Seleziona veicolo",
@@ -64,7 +64,7 @@ namespace SerialConnect
                     return ChineseTR[place-1];
                 case "简体中文":
                     return ChineseSi[place - 1];
-                case "Deutsche":
+                case "Deutsch":
                     return DE[place - 1];
                 case "English":
                     return English[place - 1];
