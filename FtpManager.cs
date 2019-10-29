@@ -15,27 +15,22 @@ namespace SerialConnect
         {
             try
             {
-                FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://35.240.51.141:21/Drive/USB PAD/Firmware/MCU/");
-                request.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://bento2.orange-electronic.com/Orange%20Cloud/Drive/USB%20PAD/Firmware/MCU/");
+                using (WebResponse wr = req.GetResponse())
+                {
+                    using (StreamReader sr = new StreamReader(wr.GetResponseStream(), Encoding.Default))
+                    {
+                        string strBuf = sr.ReadToEnd().ToString();
+                        Console.WriteLine(strBuf);
+                        if (strBuf.Contains("HREF=\""))
+                        {
+                            strBuf = strBuf.substring(strBuf.LastIndexOf("HREF=\"") + 6, strBuf.Length);
+                            return strBuf.substring(strBuf.IndexOf(">") + 1, strBuf.IndexOf("<"));
+                        }
 
-                // This example assumes the FTP site uses anonymous logon.
-                request.Credentials = new NetworkCredential("orangerd", "orangetpms(~2");
-
-                FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-
-                Stream responseStream = response.GetResponseStream();
-                StreamReader reader = new StreamReader(responseStream);
-                String file = reader.ReadToEnd();
-                Console.WriteLine(file);
-                
-                Console.WriteLine($"Directory List Complete, status {response.StatusDescription}");
-                char[] delimiterChars = { ' ' };
-
-                String[] spi = file.Split(delimiterChars);
-                reader.Close();
-                response.Close();
-                SensorRecord.SensorCode_Version = spi[spi.Length - 1];
-                return spi[spi.Length - 1];
+                    }
+                }
+                return "nodata";
             }
             catch (Exception e) { Console.WriteLine(e.Message); return "nodata"; }
         }
@@ -43,14 +38,12 @@ namespace SerialConnect
         {
             try
             {
-                FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://35.240.51.141:21/Drive/USB PAD/Firmware/MCU/" + mcuname());
-                request.Method = WebRequestMethods.Ftp.DownloadFile;
-                request.Credentials = new NetworkCredential("orangerd", "orangetpms(~2");
-                FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://bento2.orange-electronic.com/Orange%20Cloud/Drive/USB%20PAD/Firmware/MCU/" + mcuname());
+                WebResponse response = request.GetResponse();
                 Stream responseStream = response.GetResponseStream();
                 StreamReader reader = new StreamReader(responseStream);
                 Command.updateData = reader.ReadToEnd().Replace(" ", "").Replace("\r", "").Replace("\n", "");
-                Console.WriteLine($"Download Mcu Complete, status {response.StatusDescription}");
+                Console.WriteLine($"Download Mcu Complete, status ");
                 reader.Close();
                 response.Close();
 
@@ -65,16 +58,12 @@ namespace SerialConnect
         {
             try
             {
-                FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://35.240.51.141:21/Database/SensorCode/SIII/" + s19 + "/" + S19name(s19));
-                request.Method = WebRequestMethods.Ftp.DownloadFile;
-                request.Credentials = new NetworkCredential("orangerd", "orangetpms(~2");
-
-                FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://bento2.orange-electronic.com/Orange%20Cloud/Database/SensorCode/SIII/" + s19 + "/" + S19name(s19));
+                WebResponse response = req.GetResponse();
                 Stream responseStream = response.GetResponseStream();
                 StreamReader reader = new StreamReader(responseStream);
                 Command.FileData = reader.ReadToEnd().Replace(" ", "").Replace("\r", "").Replace("\n", "");
-                Console.WriteLine($"Download s19 Complete, status {response.StatusDescription}");
+                Console.WriteLine($"Download s19 Complete, status");
                 reader.Close();
                 response.Close();
 
@@ -90,26 +79,22 @@ namespace SerialConnect
         {
             try
             {
-                FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://35.240.51.141:21/Database/SensorCode/SIII/" + s19 + "/");
-                request.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://bento2.orange-electronic.com/Orange%20Cloud/Database/SensorCode/SIII/"+s19+"/");
+                using (WebResponse wr = req.GetResponse())
+                {
+                    using (StreamReader sr = new StreamReader(wr.GetResponseStream(), Encoding.Default))
+                    {
+                        string strBuf = sr.ReadToEnd().ToString();
+                        Console.WriteLine(strBuf);
+                        if (strBuf.Contains("HREF=\""))
+                        {
+                            strBuf = strBuf.substring(strBuf.LastIndexOf("HREF=\"") + 6, strBuf.Length);
+                            return strBuf.substring(strBuf.IndexOf(">") + 1, strBuf.IndexOf("<"));
+                        }
 
-                // This example assumes the FTP site uses anonymous logon.
-                request.Credentials = new NetworkCredential("orangerd", "orangetpms(~2");
-
-                FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-
-                Stream responseStream = response.GetResponseStream();
-                StreamReader reader = new StreamReader(responseStream);
-                String file = reader.ReadToEnd();
-                Console.WriteLine(file);
-                Console.WriteLine($"Directory List Complete, status {response.StatusDescription}");
-                char[] delimiterChars = { ' ' };
-
-                String[] spi = file.Split(delimiterChars);
-                reader.Close();
-                response.Close();
-                SensorRecord.SensorCode_Version = spi[spi.Length - 1];
-                return spi[spi.Length - 1];
+                    }
+                }
+                return "nodata";
             }
             catch (Exception e) { Console.WriteLine(e.Message); return "nodata"; }
 
@@ -127,14 +112,10 @@ namespace SerialConnect
                     str.Close(); return true;
                 }
                 str.Close();
-                FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://35.240.51.141:21/Database/MMY/EU/" + mmyname);
-                request.Method = WebRequestMethods.Ftp.DownloadFile;
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://bento2.orange-electronic.com/Orange%20Cloud/Database/MMY/EU/"+ mmyname);
                 String LocalDestinationPath = "usb_tx_mmy.db";
                 // This example assumes the FTP site uses anonymous logon.
-                request.Credentials = new NetworkCredential("orangerd", "orangetpms(~2");
-
-                FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-
+                WebResponse response = req.GetResponse();
                 Stream responseStream = response.GetResponseStream();
                 StreamReader reader = new StreamReader(responseStream);
                 using (FileStream writer = new FileStream(LocalDestinationPath, FileMode.Create))
@@ -153,8 +134,7 @@ namespace SerialConnect
                     }
                 }
 
-                Console.WriteLine($"Download Complete, status {response.StatusDescription}");
-
+                Console.WriteLine($"Download Complete, status ");
                 reader.Close();
                 response.Close();
                 WriteShare(mmyname);
@@ -166,27 +146,21 @@ namespace SerialConnect
         {
             try
             {
-                FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://35.240.51.141:21/Database/MMY/EU/");
-                request.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
-
-                // This example assumes the FTP site uses anonymous logon.
-                request.Credentials = new NetworkCredential("orangerd", "orangetpms(~2");
-
-                FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-
-                Stream responseStream = response.GetResponseStream();
-                StreamReader reader = new StreamReader(responseStream);
-                String file = reader.ReadToEnd();
-                Console.WriteLine(file);
-
-                Console.WriteLine($"Directory List Complete, status {response.StatusDescription}");
-                char[] delimiterChars = { ' ' };
-
-                String[] spi = file.Split(delimiterChars);
-                reader.Close();
-                response.Close();
-                SensorRecord.DB_Version = spi[spi.Length - 1];
-                return spi[spi.Length - 1];
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://bento2.orange-electronic.com/Orange%20Cloud/Database/MMY/EU/");
+                using (WebResponse wr = req.GetResponse())
+                {
+                    using (StreamReader sr = new StreamReader(wr.GetResponseStream(), Encoding.Default))
+                    {
+                        string strBuf = sr.ReadToEnd().ToString();
+                        Console.WriteLine(strBuf);
+                        if (strBuf.Contains("HREF=\"")) {
+                            strBuf = strBuf.substring(strBuf.LastIndexOf("HREF=\"") + 6, strBuf.Length);
+                            return strBuf.substring(strBuf.IndexOf(">") + 1, strBuf.IndexOf("<"));
+                        }
+                        
+                    }
+                }
+                return "nodata";
             }
             catch (Exception e) { Console.WriteLine(e.Message); return "nodata"; }
 

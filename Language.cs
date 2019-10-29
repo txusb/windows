@@ -50,7 +50,7 @@ namespace SerialConnect
 
 
         public static string[] IT = new string[]{"Sistema di programmazione TPMS Orange","Accesso utente","Nome utente","Password", "Accesso", "Seleziona veicolo",
-            "Marca", "Modello", "Anno", "Quantità", "Seleziona la posizione del pneumatico (scelta multipla)", "RF (Anteriore destro)", "RR (Posteriore destro)","LR (Posteriore sinistro)","LF (Anteriore sinistro)","Seleziona tutti","Avanti","Riseleziona"
+            "Marca", "Modello", "Anno", "Quantità", "Seleziona la posizione del pneumatico (scelta multipla)", "AD (Anteriore destro)", "PD (Posteriore destro)","PS (Posteriore sinistro)","AS (Anteriore sinistro)","Seleziona tutti","Avanti","Riseleziona"
         ,"Programma sensore","Nuovo ID del sensore","ID sensore originale","Selezione veicolo, selezionare marca, modello, anno, posizione pneumatico e poi fare clic su \"avanti\"","Inserire il numero ID in base alla posizione"
         ,"Inserire il numero ID e fare clic su \"Programma sensore\"","Programmazione, non muovere i sensori","Programmazione completata","Fallito (Posizione pneumatico fallita)","Selezione veicolo, selezionare marca, modello, anno, quantità e poi fare clic su \"avanti\""
         ,"Codice Errato","PAD non trovato nel sistema","Connessione errata del PAD","Muovi il sensore durante la Programmazione","Connessione Internet Scaduta","Nessuna connessione Internet","Download del Catalogo fallita","Scanner non Connesso","PAD rimosso durante il processo "

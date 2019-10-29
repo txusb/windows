@@ -22,6 +22,8 @@ namespace SerialConnect
 {
     public partial class FormMain : Form
     {
+        public static string admin = "";
+        public static string password = "";
         string serialnum = "99";
         bool isconnect = true;
         bool first = false;
@@ -49,8 +51,6 @@ namespace SerialConnect
         public const int LR = 7;
         public const int RR = 8;
         string Lfid = "ABCDEF";
-        static string admin = "";
-        static string password = "";
         string Rfid = "ABCDEF";
         string Lrid = "ABCDEF";
         string Rrid = "ABCDEF";
@@ -382,7 +382,8 @@ namespace SerialConnect
                                 Thread.Sleep(200);
                                 if (command.tmprx.Contains("F50004000B"))
                                 {
-                                    serialnum = command.tmprx.substring(14,26);
+                                    serialnum = command.tmprx.substring(16,26);
+                                    HttpRequest.Register(FormMain.admin, FormMain.password, serialnum, "Distributor", "spare", "spare", "spare", "spare", "spare", "spare", "spare", "spare");
                                     Console.WriteLine("Serial"+serialnum);
                                     command.serialPort = serialPort1;
                                     BeginInvoke(p, new Object[] { false });

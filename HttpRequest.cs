@@ -37,7 +37,7 @@ namespace SerialConnect
 "            <Type>" + make + "</Type>\n" +
 "            <Model>" + model + "</Model>\n" +
 "            <Year>" + year + "</Year>\n" +
-"            <CarNum>9987</CarNum>\n" +
+"            <CarNum>nodata</CarNum>\n" +
 "          </CarInfo>\n" +
 "          <TireInfo>\n" +
 "            <TireBrand>nodata</TireBrand>\n" +

@@ -133,7 +133,7 @@ namespace SerialConnect
                     case "简体中文":
                         a.Text = "学码流程尚未完成，请耐心等待，我们会尽快更新";
                         break;
-                    case "Deutsche":
+                    case "Deutsch":
                         a.Text = "Im Bau";
                         break;
                     case "English":

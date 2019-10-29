@@ -193,6 +193,8 @@ namespace SerialConnect
 
         public void signin() {
             bool a=HttpRequest.ValidateUser(admin, password);
+            FormMain.admin = admin;
+            FormMain.password = password;
             Enrol mi = new Enrol(enter);
             BeginInvoke(mi, new Object[] { a });
         }
