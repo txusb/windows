@@ -33,6 +33,7 @@ namespace SerialConnect
             comboBox1.Items.Add("Deutsch");
             comboBox1.Items.Add("English");
             comboBox1.Items.Add("Italiano");
+            comboBox1.Items.Add("Dansk");
             button4.Text = FtpManager.GetLanguage();
             setla();
             noconnect(true);

@@ -118,6 +118,7 @@ namespace SerialConnect
                 WebResponse response = req.GetResponse();
                 Stream responseStream = response.GetResponseStream();
                 StreamReader reader = new StreamReader(responseStream);
+
                 using (FileStream writer = new FileStream(LocalDestinationPath, FileMode.Create))
                 {
 

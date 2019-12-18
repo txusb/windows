@@ -94,7 +94,7 @@ namespace SerialConnect
         public static void getrelarm(TextBox a,string make,string model,string year) {
             string databaseFileName = "usb_tx_mmy.db";
             string connectionString = "data source = " + databaseFileName;
-            string colname = "English";
+            string colname = "Relearn Procedure (English)";
             SQLiteConnection dbConnection = new SQLiteConnection(connectionString);
             dbConnection.Open();
             switch(FormMain.language){

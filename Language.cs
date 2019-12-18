@@ -29,7 +29,7 @@ namespace SerialConnect
             ,"Submit","Go to your email inbox and find an email from us with the subject “Reset your password”."};
 
         public static string[] ChineseSi = new string[]{"橙的电子无线胎压烧录系统","使用者登入","账户","密码", "登入", "车辆信息",
-            "品牌", "车型", "年份", "烧录数量", "选择烧录轮位(可复选)", "RFRF (右前轮)", "RR (右后轮)","LR (左后轮)","LF (左前轮)","全选","下一步","重新选择"
+            "品牌", "车型", "年份", "烧录数量", "选择烧录轮位(可复选)", "RF (右前轮)", "RR (右后轮)","LR (左后轮)","LF (左前轮)","全选","下一步","重新选择"
         ,"执行烧录","新传感器ID号码","原传感器ID号码","车辆信息，请依序选择品牌、车型、年份与指定烧录轮位，并按下一步","请依序输入传感器ID号码"
         ,"ID号码已输入，请按执行烧录","程序烧录中，请勿移动传感器......","程序烧录完成","程序烧录失败 (失败的轮位)","车辆信息，请依序选择品牌、车型、年份与烧录数量，并按下一步"
         ,"错误代码： ","PAD装置不存在于系统中","PAD装置连接异常","烧录中移动发射器","网路连线逾时","无网路连线","下载目录失败","扫描器未连接","PAD装置中途移除"
@@ -58,6 +58,16 @@ namespace SerialConnect
         ,"Accesso fallito","Porcedura di riapprendimento","START","Inserire i sensorei nell USB PAD","error","Non connesso","Controlla gli aggiornamenti","Driver USB PAD in aggiornamento","aggiornamento completato","Aggiornamento fallito","Per aggiornare all'ultima versione","Vuoi aggiornare?","Registrazione non riuscita","Registrazione avvenuta con successo","Crea con il tuo account di posta elettronica","Numero account","E-mail"
         ,"Password","Scegliere una password","Ripetere la password","Dati personali","Nome","Cognome","Azienda","Numero telefonico","Numero di serie del prodotto","Indirizzo/ indirizzo e-mail","La zona","Codice postale","Via","Città","Stato","Minimo 8 caratteri","Conferma la password","Registrati","CancellaCancella","L'email è stata inviata","Resetta la password","Si prega di fornire l\'indirizzo e-mail che hai usatoquando ti sei registrato per l\'account O-GENIUS."
             ,"Invio","Vai alla tua casella di posta elettronica e troverai un\'e-mail con oggetto \"Resetta la password\""};
+        public static string[] DA = new string[]{"Orange Electronic TPMS progamming system","Bruger login","konto","Password", "Sign in", "Køretøjsoplysninger",
+            "mærker", "modeller", "år", "Forbrændende mængde", "Vælg brændhjul (kan vælges)", "RF (Højer forhjul)", "RR (Højre Baghjul)","LR (Venstre baghjul)","LF (Venstre forhjul)","Vælg alle","Næste","Vælg igen"
+        ,"Udfør brænding","Nyt transmitter ID-nummer","Original transmitter ID-nummer","Køretøjsinformation, vælg venligst mærket, modellen, året og det udpegede brænderhjul i rækkefølge, og klik derefter på Næste","Indtast senders ID-nummer i rækkefølge"
+        ,"Der er indtastet ID-nummer. Klik for at udføre programmeringen","Flyt ikke senderen under programmeringen......","Programmering afsluttet.","Programming failed. (Dækposition mislykkedes)","Køretøjsinformation, vælg venligst mærke, model, år og antal blink i rækkefølge, og klik derefter på Næste"
+        ,"Fejlkode:","PAD-enhed findes ikke i systemet","PAD-enhedens forbindelsesfejl","Mobil launcher under programmering","Netværksforbindelse blev udløbet","Ingen internetforbindelse","Downloadkatalog mislykkedes","Scanneren er ikke tilsluttet","PAD-enheden blev fjernet midtvejs"
+        ,"Fejl ved indlæsning af PAD-enhed","Denne fejl opstod på et ukendt sted","Brændende programindlæsning","Netværksforbindelsen er udløbet. Skal du logge ind igen?","Antallet af sendere fundet i PAD-enheden stemmer ikke overens med det valgte antal","Login mislykkedes","Lær proceduren igen","START"
+        ,"Indsæt sensoren i USB Holderen.","Fejl","ikke længere tilsluttet.","Søg efter opdateringer","USB Holder driveropdatering","Opdateringen afsluttet!","Opdatering mislykkedes","At opdatere til den nyeste version","Hvorvidt der skal opdateres","Registrering mislykkedes","Registrering godkendt","Opret din e-mail-konto","Kontonummer","E-mail"
+        ,"Password","Vælg Password","Gentag Password","Personal details","Fornavn","Efternavn","Firma","Telefon / mobil","Produkt serienummer","Adresse","Område","Postnummer","Gade","By","provinsen","Mindst 8 tegn","Bekræft venligst adgangskoden","Registrering godkendt","Cancel","E-mail sendt","Reset Password","Angiv den e-mail-adresse, du brugte da du tilmeldte dig O-GENIUS-konto."
+            ,"Send","Gå til din e-mail-indbakke og find en e-mail fra os med emnet \"Nulstil din adgangskode\"."};
+
         public static string setlan(int place){
             switch (FtpManager.GetLanguage()) {
                 case "繁體中文":
@@ -70,6 +80,8 @@ namespace SerialConnect
                     return English[place - 1];
                 case "Italiano":
                     return IT[place - 1];
+                case "Dansk":
+                    return DA[place - 1];
             }
             return "";
         }

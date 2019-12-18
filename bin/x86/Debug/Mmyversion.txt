@@ -1,1 +1,1 @@
-MMY_EU_list_V0.4_191005.db
+MMY_EU_list_V0.6_191128.db
