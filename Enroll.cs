@@ -42,6 +42,7 @@ namespace SerialConnect
             textBox1.MouseUp += new MouseEventHandler(textBox_MouseUp1);
             setlan();
         }
+
         public void setlan() {
             label1.Text = Language.setlan(1);
             label2.Text = Language.setlan(57); ;

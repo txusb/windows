@@ -21,11 +21,13 @@ namespace SerialConnect
         public delegate void NEEDUPDATER(bool Condition);
         string admin = "";
         string password = "";
+        string version = "1.0";
         Command command = new Command();
         RxCommand rxcommand = new RxCommand();
 
         public Form1()
         {
+            
             InitializeComponent();
             Console.WriteLine(DateTime.Now.Ticks);
             comboBox1.Items.Add("繁體中文");
@@ -238,6 +240,7 @@ namespace SerialConnect
 
         }
         public void UpdateCompare() {
+           
             Update u = new Update(Updater);
             BeginInvoke(u, new Object[] { true, 0 });
             String mcname = FtpManager.mcuname();
@@ -245,6 +248,18 @@ namespace SerialConnect
                 MessageBox.Show(Language.setlan(52), "false", MessageBoxButtons.OK);
                 BeginInvoke(u, new Object[] { false, 0 });
             } else {
+                if (HttpRequest.GetVersion() != version) {
+                   var a= MessageBox.Show(Language.setlan(54), "New Version", MessageBoxButtons.YesNo);
+                    switch (a) {
+                        case DialogResult.Yes:
+                            System.Diagnostics.Process.Start("http://www.orange-electronic.com/eu/orange_software_download.html");
+                            break;
+                        case DialogResult.No:
+
+                            break;
+                    };
+                } ;
+
                 command.AppverInspire = mcname.substring(9, 13);
                 Console.WriteLine("version:" + command.AppverInspire+"now:"+command.Appver) ;
                 BeginInvoke(u, new Object[] { false, 0 });

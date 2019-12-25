@@ -12,6 +12,23 @@ namespace SerialConnect
 {
     class HttpRequest
     {
+        public static string GetVersion() {
+            try {
+                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create("https://bento2.orange-electronic.com/Orange%20Cloud/Drive/USB%20PAD/APP%20Software/WinVersion.txt");
+                using (WebResponse wr = req.GetResponse())
+                {
+                    using (StreamReader sr = new StreamReader(wr.GetResponseStream(), Encoding.Default))
+                    {
+                        string strBuf = sr.ReadToEnd().ToString();
+                        Console.WriteLine(strBuf);
+                        return strBuf;
+                    }
+                }
+            } catch(Exception e) {
+                Console.WriteLine("錯誤" + e.Message);
+                return null;
+            }
+        }
         public static void Upload_IDCopyRecord(String make, String model, String year, String startime, String Endtime, String SreialNum, String Devicetype, String Mode, int SensorCount, String position
     , ArrayList idrecord)
         {
