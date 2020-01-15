@@ -136,6 +136,7 @@ namespace SerialConnect
             if (streat.Length == 0) { return; }
             if (city.Length == 0) { return; }
             if (storetype.Length == 0) { return; }
+            FtpManager.WritrArea(label20.Text);
             new Thread(register).Start();
         }
 

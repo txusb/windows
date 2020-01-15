@@ -36,7 +36,12 @@ namespace SerialConnect
             comboBox1.Items.Add("English");
             comboBox1.Items.Add("Italiano");
             comboBox1.Items.Add("Dansk");
+            comboBox2.Items.Add("EU");
+            comboBox2.Items.Add("North America");
+            comboBox2.Items.Add("台灣");
+            comboBox2.Items.Add("中國大陸");
             button4.Text = FtpManager.GetLanguage();
+            button6.Text = FtpManager.GetArea();
             setla();
             noconnect(true);
        
@@ -52,6 +57,8 @@ namespace SerialConnect
             label7.Text = Language.setlan(54);
             button1.Text = Language.setlan(5);
             button5.Text = Language.setlan(77);
+            label8.Text= Language.setlan(70)+":";
+            label10.Text= Language.setlan(85)+":";
         }
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -357,6 +364,17 @@ namespace SerialConnect
         {
             ResetPs a = new ResetPs();//產生Form2的物件，才可以使用它所提供的Method
             a.Visible = true;//顯示第二個視窗
+        }
+
+        private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            button6.Text = comboBox2.SelectedItem.ToString();
+            FtpManager.WritrArea(button6.Text);
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            comboBox2.DroppedDown = true;
         }
     }
 }

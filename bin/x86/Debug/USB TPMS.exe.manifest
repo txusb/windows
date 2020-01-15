@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="USB TPMS.exe" size="1154008">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="USB TPMS.exe" size="1156056">
       <assemblyIdentity name="USB TPMS" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PzhQlm7zTdtyAyFU9FJD0+BtulBN5HMBAs6QyWa9ci8=</dsig:DigestValue>
+        <dsig:DigestValue>aPEneQT8stGzEvlVrWTDWXSqyMFrARGl+bwTbG3XWN8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

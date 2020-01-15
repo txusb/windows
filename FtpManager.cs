@@ -15,7 +15,7 @@ namespace SerialConnect
         {
             try
             {
-                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://bento2.orange-electronic.com/Orange%20Cloud/Drive/USB%20PAD/Firmware/MCU/");
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://bento2.orange-electronic.com/Orange%20Cloud/Drive/USB%20PAD/Firmware/MCU/");
                 using (WebResponse wr = req.GetResponse())
                 {
                     using (StreamReader sr = new StreamReader(wr.GetResponseStream(), Encoding.Default))
@@ -38,7 +38,7 @@ namespace SerialConnect
         {
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://bento2.orange-electronic.com/Orange%20Cloud/Drive/USB%20PAD/Firmware/MCU/" + mcuname());
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://bento2.orange-electronic.com/Orange%20Cloud/Drive/USB%20PAD/Firmware/MCU/" + mcuname());
                 WebResponse response = request.GetResponse();
                 Stream responseStream = response.GetResponseStream();
                 StreamReader reader = new StreamReader(responseStream);
@@ -58,7 +58,7 @@ namespace SerialConnect
         {
             try
             {
-                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://bento2.orange-electronic.com/Orange%20Cloud/Database/SensorCode/SIII/" + s19 + "/" + S19name(s19));
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://bento2.orange-electronic.com/Orange%20Cloud/Database/SensorCode/SIII/" + s19 + "/" + S19name(s19));
                 WebResponse response = req.GetResponse();
                 Stream responseStream = response.GetResponseStream();
                 StreamReader reader = new StreamReader(responseStream);
@@ -79,7 +79,7 @@ namespace SerialConnect
         {
             try
             {
-                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://bento2.orange-electronic.com/Orange%20Cloud/Database/SensorCode/SIII/"+s19+"/");
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://bento2.orange-electronic.com/Orange%20Cloud/Database/SensorCode/SIII/" + s19+"/");
                 using (WebResponse wr = req.GetResponse())
                 {
                     using (StreamReader sr = new StreamReader(wr.GetResponseStream(), Encoding.Default))
@@ -103,7 +103,22 @@ namespace SerialConnect
         {
             try
             {
-                String mmyname = Mmyname();
+                String ArUrl = "EU";
+                switch (FtpManager.GetArea())
+                {
+                    case "EU":
+                        ArUrl = "EU";
+                        break;
+                    case "North America":
+                        ArUrl = "US";
+                        break;
+                    case "台灣":
+                        break;
+                    case "中國大陸":
+                        break;
+
+                }
+                String mmyname = Mmyname(ArUrl);
                 StreamReader str = new StreamReader("Mmyversion.txt");
                 String ss = str.ReadToEnd();
                 if (ss.Contains(mmyname))
@@ -112,7 +127,7 @@ namespace SerialConnect
                     str.Close(); return true;
                 }
                 str.Close();
-                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://bento2.orange-electronic.com/Orange%20Cloud/Database/MMY/EU/"+ mmyname);
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://bento2.orange-electronic.com/Orange%20Cloud/Database/MMY/"+ ArUrl + "/" + mmyname);
                 String LocalDestinationPath = "usb_tx_mmy.db";
                 // This example assumes the FTP site uses anonymous logon.
                 WebResponse response = req.GetResponse();
@@ -143,11 +158,11 @@ namespace SerialConnect
             }
             catch (Exception e) { Console.WriteLine(e.Message); return false; }
         }
-        public static String Mmyname()
+        public static String Mmyname(String ArUrl)
         {
             try
             {
-                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://bento2.orange-electronic.com/Orange%20Cloud/Database/MMY/EU/");
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://bento2.orange-electronic.com/Orange%20Cloud/Database/MMY/"+ ArUrl + "/");
                 using (WebResponse wr = req.GetResponse())
                 {
                     using (StreamReader sr = new StreamReader(wr.GetResponseStream(), Encoding.Default))
@@ -218,5 +233,35 @@ namespace SerialConnect
             if (ss.Length > 2) { return ss; } else { return "English"; }
 
         }
+        public static void WritrArea(String mmtname)
+        {
+            string[] lines = { mmtname };
+
+            // Set a variable to the Documents path.
+
+
+            // Write the string array to a new file named "WriteLines.txt".
+            using (StreamWriter outputFile = new StreamWriter("area.txt"))
+            {
+                foreach (string line in lines)
+                    outputFile.WriteLine(line);
+            }
+
+        }
+        public static string GetArea()
+        {
+            if (!File.Exists("area.txt"))
+            {
+                FileStream fs = File.Create("area.txt");
+                fs.Close();
+                return "EU";
+            };
+            StreamReader str = new StreamReader("area.txt");
+            String ss = str.ReadToEnd().Replace("\r\n", "");
+            str.Close();
+            if (ss.Length > 2) { return ss; } else { return "EU"; }
+
+        }
     }
+
 }
