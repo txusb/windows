@@ -1479,7 +1479,7 @@ namespace SerialConnect
             ResizeText(label11, 11);
             label11.Location = new System.Drawing.Point((panel20.Width - label11.Width) / 2,label11.Location.Y);
         }
-        public void UpdateUi(int position, int situation)
+        public void UpdateUi(int position, int situation,Boolean canPr)
         {
 
             switch (position)
@@ -1508,11 +1508,11 @@ namespace SerialConnect
                             break;
                         case PROGRAM_WAIT:
                             LFL2.Text = Lfid;
-                            LFI2.Image = Properties.Resources.img_rectangle_Blue;
                             LFI1.Image = Properties.Resources.img_rectangle_white;
                             LFL1.Enabled = true;
                             LFL1.ForeColor = Color.FromArgb(2, 56, 86);
                             LFL1.BackColor = Color.FromArgb(255, 255, 255);
+                            if (canPr) { LFI2.Image = Properties.Resources.img_rectangle_Blue; } else { LFI2.Image = Properties.Resources.img_rectangle_error; }
                             break;
                     }
                     break;
@@ -1540,11 +1540,11 @@ namespace SerialConnect
                             break;
                         case PROGRAM_WAIT:
                             RFL2.Text = Rfid;
-                            RFI2.Image = Properties.Resources.img_rectangle_Blue;
                             RFI1.Image = Properties.Resources.img_rectangle_white;
                             RFL1.Enabled = true;
                             RFL1.ForeColor = Color.FromArgb(2, 56, 86);
                             RFL1.BackColor = Color.FromArgb(255, 255, 255);
+                            if (canPr) { RFI2.Image = Properties.Resources.img_rectangle_Blue; } else { RFI2.Image = Properties.Resources.img_rectangle_error; }
                             break;
                     }
                     break;
@@ -1572,11 +1572,11 @@ namespace SerialConnect
                             break;
                         case PROGRAM_WAIT:
                             LRL1.Text = Lrid;
-                            LRI1.Image = Properties.Resources.img_rectangle_Blue;
                             LRI2.Image = Properties.Resources.img_rectangle_white;
                             LRL2.Enabled = true;
                             LRL2.ForeColor = Color.FromArgb(2, 56, 86);
                             LRL2.BackColor = Color.FromArgb(255, 255, 255);
+                            if (canPr) { LRI1.Image = Properties.Resources.img_rectangle_Blue; } else { LRI1.Image = Properties.Resources.img_rectangle_error; }
                             break;
                     }
                     break;
@@ -1604,11 +1604,11 @@ namespace SerialConnect
                             break;
                         case PROGRAM_WAIT:
                             RRL1.Text = Rrid;
-                            RRI1.Image = Properties.Resources.img_rectangle_Blue;
                             RRI2.Image = Properties.Resources.img_rectangle_white;
                             RRL2.Enabled = true;
                             RRL2.ForeColor = Color.FromArgb(2, 56, 86);
                             RRL2.BackColor = Color.FromArgb(255, 255, 255);
+                            if (canPr) { RRI1.Image = Properties.Resources.img_rectangle_Blue; } else { RRI1.Image = Properties.Resources.img_rectangle_error; }
                             break;
                     }
                     break;
@@ -1637,22 +1637,22 @@ namespace SerialConnect
                 {
                     Rrid = Getid(a);
                 
-                    UpdateUi(RR, PROGRAM_SUCCESS);
+                    UpdateUi(RR, PROGRAM_SUCCESS,true);
                 }
                 if (a.substring(0, 2).Equals("03"))
                 {
                     Rfid = Getid(a);
-                    UpdateUi(RF, PROGRAM_SUCCESS);
+                    UpdateUi(RF, PROGRAM_SUCCESS, true);
                 }
                 if (a.substring(0, 2).Equals("02"))
                 {
                     Lrid = Getid(a);
-                    UpdateUi(LR, PROGRAM_SUCCESS);
+                    UpdateUi(LR, PROGRAM_SUCCESS, true);
                 }
                 if (a.substring(0, 2).Equals("01"))
                 {
                     Lfid = Getid(a);
-                    UpdateUi(LF, PROGRAM_SUCCESS);
+                    UpdateUi(LF, PROGRAM_SUCCESS, true);
                 }
             }
             UpdateUiCondition(PROGRAM_SUCCESS);
@@ -1665,19 +1665,19 @@ namespace SerialConnect
                     {
                         case "04":
                             Rrid = "error";
-                            UpdateUi(RR, PROGRAM_FAULSE);
+                            UpdateUi(RR, PROGRAM_FAULSE, true);
                             break;
                         case "03":
                             Rfid = "error";
-                            UpdateUi(RF, PROGRAM_FAULSE);
+                            UpdateUi(RF, PROGRAM_FAULSE, true);
                             break;
                         case "02":
                             Lrid = "error";
-                            UpdateUi(LR, PROGRAM_FAULSE);
+                            UpdateUi(LR, PROGRAM_FAULSE, true);
                             break;
                         case "01":
                             Lfid = "error";
-                            UpdateUi(LF, PROGRAM_FAULSE);
+                            UpdateUi(LF, PROGRAM_FAULSE, true);
                             break;
                     }
                 }
@@ -1686,26 +1686,26 @@ namespace SerialConnect
                     switch (a)
                     {
                         case "04":
-                            UpdateUi(RR, UN_LINK);
+                            UpdateUi(RR, UN_LINK, true);
                             break;
                         case "03":
-                            UpdateUi(RF, UN_LINK);
+                            UpdateUi(RF, UN_LINK, true);
                             break;
                         case "02":
-                            UpdateUi(LR, UN_LINK);
+                            UpdateUi(LR, UN_LINK, true);
                             break;
                         case "01":
-                            UpdateUi(LF, UN_LINK);
+                            UpdateUi(LF, UN_LINK, true);
                             break;
                     }
                 }
                 if (command.FALSE_CHANNEL.Count == 0 && command.BLANK_CHANNEL.Count == 0)
                 {
                     UpdateUiCondition(PROGRAM_FAULSE);
-                    UpdateUi(LF, PROGRAM_FAULSE);
-                    UpdateUi(LR, PROGRAM_FAULSE);
-                    UpdateUi(RF, PROGRAM_FAULSE);
-                    UpdateUi(RR, PROGRAM_FAULSE);
+                    UpdateUi(LF, PROGRAM_FAULSE, true);
+                    UpdateUi(LR, PROGRAM_FAULSE, true);
+                    UpdateUi(RF, PROGRAM_FAULSE, true);
+                    UpdateUi(RR, PROGRAM_FAULSE, true);
                 }
             }
          

@@ -22,6 +22,8 @@ namespace SerialConnect
 {
     public partial class FormMain : Form
     {
+        string spversion = "";
+        string SensorMode = "";
         public static string admin = "";
         public static string password = "";
         string serialnum = "99";
@@ -32,7 +34,7 @@ namespace SerialConnect
         public static string language = "繁體中文";
         string PRORID = "PR";
         string Lf = "0";
-        public delegate void MyInvoke(bool CH1, String Id1, bool CH2, String Id2, int i);
+        public delegate void MyInvoke(SensorBean CH1, String Id1, SensorBean CH2, String Id2, int i);
         public delegate void Player(String a);
         public delegate void Pauser();
         public delegate void ISCONNN(bool Condition);
@@ -79,13 +81,14 @@ namespace SerialConnect
             //pictureBox3.Parent = pictureBox1;
             this.label1.BackColor = Color.Transparent;
             UpdateUiCondition(PROGRAM_WAIT);
-            UpdateUi(LF, UN_LINK);
-            UpdateUi(RF, UN_LINK);
-            UpdateUi(RR, UN_LINK);
-            UpdateUi(LR, UN_LINK);
+            UpdateUi(LF, UN_LINK,true);
+            UpdateUi(RF, UN_LINK, true);
+            UpdateUi(RR, UN_LINK, true);
+            UpdateUi(LR, UN_LINK, true);
             new Thread(UdCondition).Start();
         }
-        public void CopyUI() {
+        public void CopyUI()
+        {
             this.tableLayoutPanel3.Controls.Clear();
             this.tableLayoutPanel3.Controls.Add(this.panel11, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.panel10, 0, 4);
@@ -101,7 +104,8 @@ namespace SerialConnect
             this.tableLayoutPanel6.Controls.Add(this.panel17, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.panel18, 0, 2);
         }
-        public void ProGramUI() {
+        public void ProGramUI()
+        {
             this.tableLayoutPanel3.Controls.Clear();
             this.tableLayoutPanel3.Controls.Add(this.panel11, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.panel10, 0, 4);
@@ -117,14 +121,16 @@ namespace SerialConnect
             this.tableLayoutPanel6.Controls.Add(this.panel17, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel18, 0, 2);
         }
-        public void NoPR() {
+        public void NoPR()
+        {
             button1.Enabled = false;
         }
+        ArrayList beans = new ArrayList { new SensorBean(), new SensorBean(), new SensorBean(), new SensorBean() };
         public void UdCondition()
         {
             try
             {
-              
+
                 while (first == false)
                 {
                     Thread.Sleep(500);
@@ -132,10 +138,20 @@ namespace SerialConnect
                 ISPROGRAMMING = true;
                 for (int i = 0; i < 2; i++)
                 {
-                    bool CH1 = command.Command_11(i, 1);
-                    String Id1 = command.ID;
-                    bool CH2 = command.Command_11(i, 2);
-                    String Id2 = command.ID;
+                    SensorBean CH1 = command.Command_11(i, 1, SensorMode);
+                    String Id1 = CH1.id;
+                    SensorBean CH2 = command.Command_11(i, 2, SensorMode);
+                    String Id2 = CH2.id; 
+                    if (i == 0)
+                    {
+                        beans[0] = CH1;
+                        beans[1] = CH2;
+                            }
+                    else
+                    {
+                        beans[2] = CH1;
+                        beans[3] = CH2;
+                    }
                     MyInvoke mi = new MyInvoke(UpdateForm);
                     BeginInvoke(mi, new Object[] { CH1, Id1, CH2, Id2, i });
 
@@ -143,17 +159,18 @@ namespace SerialConnect
                 ISPROGRAMMING = false;
                 Thread.Sleep(3000);
                 UdCondition();
-            }catch (Exception e)
+            }
+            catch (Exception e)
             {
                 ISPROGRAMMING = false;
             }
 
 
         }
-        public void UpdateForm(bool CH1, String Id1, bool CH2, String Id2, int i)
+        public void UpdateForm(SensorBean CH1, String Id1, SensorBean CH2, String Id2, int i)
         {
             button1.Enabled = true;
-            if (CH1)
+            if (CH1.result)
             {
                 if (mmynum.Equals("RN1628") || mmynum.Equals("SI2048"))
                 {
@@ -164,13 +181,13 @@ namespace SerialConnect
                 if (i == 0)
                 {
                     Lfid = Id1;
-                    if (first) { UpdateUi(LF, PROGRAM_WAIT); }
+                    if (first) { UpdateUi(LF, PROGRAM_WAIT, CH1.canPr); }
                     LFL2.Text = Lfid;
                 }
                 else
                 {
                     Rfid = Id1;
-                    if (first) { UpdateUi(RF, PROGRAM_WAIT); }
+                    if (first) { UpdateUi(RF, PROGRAM_WAIT, CH1.canPr); }
                     RFL2.Text = Rfid;
                 }
             }
@@ -178,19 +195,19 @@ namespace SerialConnect
             {
                 if (i == 0)
                 {
-                    Lfid = Language.setlan(48); 
-                    if (first) { UpdateUi(LF, UN_LINK); }
+                    Lfid = Language.setlan(48);
+                    if (first) { UpdateUi(LF, UN_LINK, CH1.canPr); }
                     LFL2.Text = Lfid;
                 }
                 else
                 {
                     Rfid = Language.setlan(48); ;
-                    if (first) { UpdateUi(RF, UN_LINK); }
+                    if (first) { UpdateUi(RF, UN_LINK, CH1.canPr); }
                     RFL2.Text = Rfid;
                 }
 
             }
-            if (CH2)
+            if (CH2.result)
             {
                 if (mmynum.Equals("RN1628") || mmynum.Equals("SI2048"))
                 {
@@ -201,13 +218,13 @@ namespace SerialConnect
                 if (i == 0)
                 {
                     Lrid = Id2;
-                    if (first) { UpdateUi(LR, PROGRAM_WAIT); }
+                    if (first) { UpdateUi(LR, PROGRAM_WAIT, CH2.canPr); }
                     LRL1.Text = Lrid;
                 }
                 else
                 {
                     Rrid = Id2;
-                    if (first) { UpdateUi(RR, PROGRAM_WAIT); }
+                    if (first) { UpdateUi(RR, PROGRAM_WAIT, CH2.canPr); }
                     RRL1.Text = Rrid;
                 }
             }
@@ -216,13 +233,13 @@ namespace SerialConnect
                 if (i == 0)
                 {
                     Lrid = Language.setlan(48); ;
-                    if (first) { UpdateUi(LR, UN_LINK); }
+                    if (first) { UpdateUi(LR, UN_LINK, CH2.canPr); }
                     LRL1.Text = Lrid;
                 }
                 else
                 {
                     Rrid = Language.setlan(48); ;
-                    if (first) { UpdateUi(RR, UN_LINK); }
+                    if (first) { UpdateUi(RR, UN_LINK, CH2.canPr); }
                     RRL1.Text = Rrid;
                 }
             }
@@ -305,13 +322,13 @@ namespace SerialConnect
             }
         }
         protected override void OnClosing(CancelEventArgs e)
-        {   
+        {
             Console.WriteLine("close");
             serialPort1.Close();
             System.Environment.Exit(0);
             base.OnClosing(e);
         }
-       
+
         public String replace1(String a, String b)
         {
             if (a.Contains(b))
@@ -382,9 +399,9 @@ namespace SerialConnect
                                 Thread.Sleep(200);
                                 if (command.tmprx.Contains("F50004000B"))
                                 {
-                                    serialnum = command.tmprx.substring(16,26);
-                                    HttpRequest.Register(FormMain.admin, FormMain.password, serialnum, "Distributor", "spare", "spare", "spare", "spare", "spare", "spare", "spare", "spare");
-                                    Console.WriteLine("Serial"+serialnum);
+                                    serialnum = command.tmprx.substring(14, 26);
+                                    HttpRequest.Register(FormMain.admin, FormMain.password, "SP:" + serialnum, "Distributor", "spare", "spare", "spare", "spare", "spare", "spare", "spare", "spare");
+                                    Console.WriteLine("Serial" + serialnum);
                                     command.serialPort = serialPort1;
                                     BeginInvoke(p, new Object[] { false });
                                     break;
@@ -392,7 +409,7 @@ namespace SerialConnect
                                 else { serialPort1.Close(); }
                             }
                         }
-                        catch (Exception e) { Console.WriteLine("異常"+e.Message); }
+                        catch (Exception e) { Console.WriteLine("異常" + e.Message); }
                     }
                     Thread.Sleep(2000);
                     ind++;
@@ -403,6 +420,7 @@ namespace SerialConnect
 
         public void Program()
         {
+          
             bool Condition = false;
             if (PRORID.Equals("ID"))
             {
@@ -481,7 +499,7 @@ namespace SerialConnect
                     {
                         Lfid = Getid(a);
                         SensorRecord b = new SensorRecord();
-                        b.IsSuccess = "true"; 
+                        b.IsSuccess = "true";
                         b.SensorID = Lfid;
                         idrecord.Add(b);
                     }
@@ -499,7 +517,7 @@ namespace SerialConnect
             BeginInvoke(mi, new Object[] { Condition });
         }
 
-      
+
         public string insertz(string text)
         {
             string a = text;
@@ -524,7 +542,7 @@ namespace SerialConnect
 
             command.tmprx = command.tmprx + ToHexString(a);
             Console.WriteLine("check:" + command.check + " --" + command.tmprx);
-            if (command.tmprx.Length == command.check)
+            if (command.tmprx.Length == command.check|| command.check==0)
             {
                 Console.WriteLine("RX:" + command.tmprx);
                 rxcommand.RX(Getbytes(command.tmprx), command);
@@ -610,10 +628,13 @@ namespace SerialConnect
             s19name = SqlHelper.GetS19(button4.Text, button5.Text, comboBox4.SelectedItem.ToString());
             if (!s19name.Equals("nodata"))
             {
+                spversion = SqlHelper.SensorModel(s19name);
+                if (spversion == "SP201") { SensorMode = SensorBean._433; }
+                if (spversion == "SP202") { SensorMode = SensorBean._315; }
                 first = true;
                 new Thread(DonloadS19).Start();
                 button6.Text = comboBox4.SelectedItem.ToString();
-                button1.BackgroundImage= Properties.Resources.button_normal;
+                button1.BackgroundImage = Properties.Resources.button_normal;
                 UpdateUiCondition(PROGRAM_WAIT);
                 idcount = SqlHelper.Idcount(s19name);
                 LFL1.Text = "";
@@ -634,6 +655,15 @@ namespace SerialConnect
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < beans.Count; i++)
+            {
+                SensorBean a = (SensorBean)beans[i];
+                if (!a.canPr)
+                {
+                    MessageBox.Show(Language.setlan(84).Replace("SP201",spversion), "false", MessageBoxButtons.OK);
+                    return;
+                };
+            }
             if (s19name.Equals("nodata") || ISPROGRAMMING) { return; }
             if (PRORID.Equals("ID"))
             {

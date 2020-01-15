@@ -26,6 +26,21 @@ namespace SerialConnect
                 Console.WriteLine("Make: " + reader["Make"]);
             }
         }
+        public static string SensorModel(String s19) {
+            string databaseFileName = "usb_tx_mmy.db";
+            string connectionString = "data source = " + databaseFileName;
+            SQLiteConnection dbConnection = new SQLiteConnection(connectionString);
+            dbConnection.Open();
+            string sql = "select `Sensor` from `Summary table` where  `Direct Fit`='"+ s19+"'";
+            SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Console.WriteLine("Sensor: " + reader["Sensor"]);
+                return (String)reader["Sensor"];
+            }
+            return "";
+        }
         public static void SelectModel(System.Windows.Forms.ComboBox box, String make)
         {
             box.Items.Clear();

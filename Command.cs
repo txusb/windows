@@ -334,13 +334,23 @@ namespace SerialConnect
                     }
                 }
             }
-        public bool Command_11(int ic, int channel)
+        public SensorBean Command_11(int ic, int channel, String version)
         {
-                int check = 30;
-            ID = "Unlinked";
+            SensorBean sensorBean = new SensorBean();
+            int check = 30;
+                ID = "Unlinked";
                 Rx = "";
-                String commeand = "0ASS110004CCXXXXF5".Replace("SS", ToHexString(new byte[] { (byte)ic })).Replace("CC", ToHexString(new byte[] { (byte)channel }));
-                SendData((getCRC16(commeand)), check);
+            String CC = "";
+            if (version.Equals(SensorBean._315))
+            {
+                CC = "1" + channel;
+            }
+            else if (version.Equals(SensorBean._433))
+            {
+                CC = "0" + channel;
+            }
+            String commeand = "0ASS110004CCXXXXF5".Replace("SS", ToHexString(new byte[] { (byte)ic })).Replace("CC", CC);
+                SendData((getCRC16(commeand)), 0);
              
                 DateTime past = DateTime.Now;
                 int fal = 0;
@@ -350,17 +360,30 @@ namespace SerialConnect
                     double time = (now - past).TotalSeconds;
                     if (time > 2)
                     {
-                        SendData((getCRC16(commeand)), check);
+                        SendData((getCRC16(commeand)), 0);
                         past = DateTime.Now;
                         fal++;
                     }
-                    if (fal == 1) { return false; }
-                    if (Rx.Length == check)
+                    if (fal == 1) { return sensorBean; }
+                    if (Rx.Length >= check)
                     {
-                        Boolean g = checkcommand(Rx.substring(10, 12));
-                        if (g) { ID = Rx.substring(14, 22); }
-                        return g;
+                    sensorBean.id = Rx.substring(14, 22);
+                    if (Rx.substring(24, 25).Equals("0"))
+                    {
+                        sensorBean.boot_var = SensorBean._433;
                     }
+                    else if (Rx.substring(24, 25).Equals("1"))
+                    {
+                        sensorBean.boot_var = SensorBean._315;
+                    }
+                    else if (Rx.substring(24, 25).Equals("A"))
+                    {
+                        sensorBean.boot_var = SensorBean._雙頻;
+                    }
+                    sensorBean.canPr = version.Equals(sensorBean.boot_var) || sensorBean.boot_var.Equals(SensorBean._雙頻);
+                    sensorBean.result = !sensorBean.id.Equals("00018001");
+                    return sensorBean;
+                }
                 }
             }
         public Boolean checkcommand(String a)
